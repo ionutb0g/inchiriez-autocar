@@ -1,0 +1,31 @@
+---
+import ServiceArticle from "@components/ServiceArticle.astro";
+---
+
+<section class="my-8 px-4 text-center">
+  <div class="flex items-center gap-6 mb-4">
+    <hr class="flex-1" />
+    <h1 class="text-xl font-bold">Servicii</h1>
+    <hr class="flex-1" />
+  </div>
+  <p class="text-sm">
+    Firmă de transport ce vă poate oferi microbuz, miniautocar, autocar potrivit
+    nevoilor dvs. Autocarele din flota noastră modernă și șoferii noștri
+    profesioniști vă vor transporta la destinație în siguranță și cu
+    punctualitate.
+  </p>
+  <ul class="my-4 flex flex-col gap-4">
+    <ServiceArticle
+      title="Transport evenimente"
+      description="Avem experiență în deplasarea de grupuri la diferite tipuri de evenimente. Realizăm transportul de persoane intern și internațional la orice destinație (la cerere). Exemplu de servicii: Transport pentru petreceri de firmă, nunți, călătorii business, excursii și tururi educaționale pentru școli, grădinițe, universități, grupuri religioase."
+    />
+    <ServiceArticle
+      title="Turism"
+      description="Organizăm circuite turistice de neuitat. Familii numeroase pot profita de un transport economic până la destinația dorită în siguranță și confort."
+    />
+    <ServiceArticle
+      title="Transport angajați"
+      description="Acest serviciu se adresează companiilor cu sediul în afara orașului și nu numai, punem la dispoziție soluții avantajoase de transport al angajaților în siguranță și fără riscuri."
+    />
+  </ul>
+</section>

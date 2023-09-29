@@ -1,0 +1,42 @@
+---
+import AboutCard from "@components/AboutCard.astro";
+---
+
+<section class="my-8 px-4 text-center">
+  <div class="flex items-center gap-6 mb-4">
+    <hr class="flex-1" />
+    <h1 class="font-bold whitespace-nowrap">
+      <span class="text-zinc-600">INCHIRIEZ</span>
+      <span>-AUTOCAR.RO</span>
+    </h1>
+    <hr class="flex-1" />
+  </div>
+  <p class="text-sm">
+    Firma noastră este specializată pe transportul de persoane, având o
+    experiență de peste 15 ani cu o varietate de clienți - de la start-up-uri
+    până la companii cu personal numeros. Seriozitatea și punctualitatea ne
+    recomandă astfel încât beneficiarii să fie mulțumiți de serviciile noastre.
+  </p>
+  <ul class="my-4 flex flex-col gap-2 text-start md:grid grid-cols-2">
+    <AboutCard
+      text="Siguranță și confort"
+      imgSrc="/draws/smile.webp"
+      imgAlt="smile"
+    />
+    <AboutCard
+      text="Servicii pentru orice categorie de clienți"
+      imgSrc="/draws/bus.webp"
+      imgAlt="bus"
+    />
+    <AboutCard
+      text="Promptitudine în preluarea comenzilor"
+      imgSrc="/draws/call.webp"
+      imgAlt="call"
+    />
+    <AboutCard
+      text="Servicii de calitate"
+      imgSrc="/draws/diploma.webp"
+      imgAlt="diploma"
+    />
+  </ul>
+</section>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  label: string;
+  isActive?: boolean;
+}
+
+const { label, isActive = false } = Astro.props;
+---
+
+<a
+  href=""
+  class:list={[
+    "flex items-center justify-between px-4 py-2 rounded-full shadow",
+    isActive ? "bg-zinc-600 text-white" : "bg-zinc-200",
+  ]}
+>
+  <span class="font-bold">{label}</span>
+  <slot name="end" />
+</a>

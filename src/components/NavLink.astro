@@ -1,0 +1,25 @@
+---
+import Icon from "heroicons-astro/Heroicon.astro";
+
+interface Props {
+  icon: string;
+  label: string;
+  to: string;
+  active?: boolean;
+}
+
+const { icon, label, to, active = false } = Astro.props;
+---
+
+<a
+  href={to}
+  class:list={[
+    "inline-flex items-center gap-2 px-3 py-2 rounded-full md:bg-transparent border-zinc-600 group",
+    active
+      ? "bg-zinc-600 text-white md:text-zinc-600 md:rounded-none md:border-b-2"
+      : "bg-zinc-100",
+  ]}
+>
+  <Icon iconCode={icon} customClasses="w-5 h-5 md:w-6 md:h-6" />
+  <span class="text-xs font-bold whitespace-nowrap md:text-sm">{label}</span>
+</a>

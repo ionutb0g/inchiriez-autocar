@@ -1,0 +1,16 @@
+---
+interface Props {
+  text: string;
+  imgSrc: string;
+  imgAlt: string;
+}
+
+const { text, imgSrc, imgAlt } = Astro.props;
+---
+
+<li class="border px-4 py-2 rounded-lg">
+  <article class="flex items-center justify-between">
+    <p class="text-sm font-bold">{text}</p>
+    <img src={imgSrc} alt={imgAlt} class="w-16 h-16" />
+  </article>
+</li>
