@@ -3,15 +3,21 @@ import SocialLink from "@components/SocialLink.astro";
 import Icon from "heroicons-astro/Heroicon.astro";
 ---
 
-<section class="my-4 px-4 text-center">
+<section
+  class="section text-center flex flex-col justify-between md:flex-row-reverse md:text-start"
+>
   <div>
     <img src="/banner/x512.avif" alt="" class="w-full" />
   </div>
   <div>
-    <h1 class="text-2xl font-bold">Servicii de transport persoane</h1>
-    <h2 class="text-xl font-bold my-2">Transport în siguranță și confort</h2>
+    <h1 class="text-2xl font-bold md:text-3xl lg:text-4xl xl:text-5xl">
+      Servicii de transport persoane
+    </h1>
+    <h2 class="text-xl font-bold my-2 md:text-2xl lg:text-3xl xl:text-4xl">
+      Transport în siguranță și confort
+    </h2>
     <p class="my-4">Peste 15 ani de experiență.</p>
-    <nav class="flex flex-col gap-2">
+    <nav class="flex flex-col gap-2 md:gap-4">
       <SocialLink label="Whatsapp" isActive>
         <svg
           slot="end"

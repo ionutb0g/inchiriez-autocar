@@ -7,10 +7,10 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<li class="border rounded-lg">
-  <article class="px-4 py-2 flex flex-col gap-4">
+<li class="flex-1 border rounded-lg">
+  <article class="h-full px-4 py-2 flex flex-col gap-4">
     <h2 class="text-lg font-bold">{title}</h2>
-    <p class="text-xs font-light">
+    <p class="flex-1 text-xs font-light">
       {description}
     </p>
     <a
