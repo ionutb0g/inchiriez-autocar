@@ -13,18 +13,22 @@
       </svg>
     </a>
   </div>
-  <div
-    id="banner"
-    class="bg-zinc-800 text-white mx-4 my-2 p-4 rounded-lg hidden"
-  >
-    <h1 class="text-lg font-bold mb-4">Acum este Deschis!</h1>
-    <p class="text-sm">Programul de lucru este intre orele 9:00 - 21:00</p>
-    <button
-      id="close-btn"
-      class="w-full p-4 border rounded-lg border-white mt-4 text-sm font-bold"
-    >
-      CONTINUĂ NAVIGAREA
-    </button>
+  <div id="banner" class="hidden max-w-7xl mx-auto justify-end px-4">
+    <div class="w-full max-w-md bg-zinc-800 text-white my-2 p-4 rounded-lg">
+      <h1 id="title" class="text-lg font-bold mb-4">Acum este Deschis!</h1>
+      <p class="text-sm">
+        Programul de lucru este intre orele <span class="whitespace-nowrap">
+          9:00 - 21:00</span
+        >
+      </p>
+      <p class="text-sm">Doar pentru București și împrejurimi.</p>
+      <button
+        id="close-btn"
+        class="w-full p-4 border rounded-lg border-white mt-4 text-sm font-bold"
+      >
+        CONTINUĂ NAVIGAREA
+      </button>
+    </div>
   </div>
 </section>
 
@@ -43,7 +47,13 @@
   }
 
   function showBanner() {
+    const titleElement = document.getElementById("title");
+    const hour = new Date().getHours();
+    titleElement!.innerText =
+      "Acum este " + (hour >= 9 && hour < 21 ? "Deschis" : "Inchis") + "!";
+
     banner?.classList.remove("hidden");
+    banner?.classList.add("flex");
     hideBanner();
     setTimeout(() => {
       section?.classList.add("transition", "duration-1000");
@@ -51,5 +61,7 @@
     }, 1);
   }
 
-  document.addEventListener("DOMContentLoaded", showBanner);
+  document.addEventListener("DOMContentLoaded", () =>
+    setTimeout(showBanner, 2000)
+  );
 </script>
