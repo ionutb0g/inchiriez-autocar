@@ -4,6 +4,7 @@ import Icon from "heroicons-astro/Heroicon.astro";
 ---
 
 <section
+  id="home"
   class="section text-center flex flex-col justify-between md:flex-row-reverse md:text-start"
 >
   <div>
@@ -18,7 +19,11 @@ import Icon from "heroicons-astro/Heroicon.astro";
     </h2>
     <p class="my-4">Peste 15 ani de experiență.</p>
     <nav class="flex flex-col gap-2 md:gap-4">
-      <SocialLink label="Whatsapp" isActive>
+      <SocialLink
+        to="https://api.whatsapp.com/send?phone=+40760770913"
+        label="Whatsapp"
+        isActive
+      >
         <svg
           slot="end"
           xmlns="http://www.w3.org/2000/svg"
@@ -31,10 +36,13 @@ import Icon from "heroicons-astro/Heroicon.astro";
           ></path>
         </svg>
       </SocialLink>
-      <SocialLink label="+40 760 770 931">
+      <SocialLink to="tel:+40760770913" label="+40 760 770 913">
         <Icon slot="end" iconCode="phone" customClasses="w-8 h-8" />
       </SocialLink>
-      <SocialLink label="stefitrans2000@gmail.com">
+      <SocialLink
+        to="mailto:stefitrans2000@gmail.com"
+        label="stefitrans2000@gmail.com"
+      >
         <Icon slot="end" iconCode="mail-open" customClasses="w-8 h-8" />
       </SocialLink>
     </nav>

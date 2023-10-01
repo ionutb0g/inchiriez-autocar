@@ -10,5 +10,7 @@ module.exports = {
 			//   },
 		},
 	},
+	safelist: ['duration-1000', 'transition'],
 	plugins: [],
+
 }
