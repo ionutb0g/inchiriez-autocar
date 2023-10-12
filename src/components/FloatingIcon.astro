@@ -2,13 +2,16 @@
 import Icon from "heroicons-astro/Heroicon.astro";
 ---
 
-<section id="banner-section" class="w-full fixed bottom-0 transform">
+<section
+  id="banner-section"
+  class="w-full fixed bottom-0 transform pointer-events-none"
+>
   <ul class="max-w-7xl mx-auto p-4 flex flex-col gap-2">
     <li class="flex justify-end">
       <a
         href="tel:+40760770913"
         aria-label="make a call"
-        class="inline-block p-4 shadow-lg rounded-full bg-green-700 text-white"
+        class="inline-block p-4 shadow-lg rounded-full bg-green-700 text-white pointer-events-auto"
       >
         <Icon
           iconCode="phone"
@@ -20,7 +23,7 @@ import Icon from "heroicons-astro/Heroicon.astro";
       <a
         aria-label="write us on whatsapp"
         href="https://api.whatsapp.com/send?phone=+40760770913"
-        class="inline-block p-4 shadow-lg rounded-full bg-green-700 text-white"
+        class="inline-block p-4 shadow-lg rounded-full bg-green-700 text-white pointer-events-auto"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +39,9 @@ import Icon from "heroicons-astro/Heroicon.astro";
     </li>
   </ul>
   <div id="banner" class="hidden max-w-7xl mx-auto justify-end px-4">
-    <div class="w-full max-w-md bg-zinc-800 text-white my-2 p-4 rounded-lg">
+    <div
+      class="w-full max-w-md bg-zinc-800 text-white mb-2 p-4 rounded-lg pointer-events-auto"
+    >
       <h1 id="title" class="text-lg font-bold mb-4">Acum este Deschis!</h1>
       <p class="text-sm">
         Programul de lucru este intre orele <span class="whitespace-nowrap">
